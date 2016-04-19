@@ -1,4 +1,4 @@
-package com.mydomain.security;
+package com.auth0.example.security;
 
 import com.auth0.spring.security.auth0.Auth0AuthenticationEntryPoint;
 import com.auth0.spring.security.auth0.Auth0AuthenticationFilter;
@@ -90,7 +90,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     }
 
     //Used as a tool to retrieve info from Auth0 via the Token (not required for the Spring Security implementation)
-//    @Bean(name = "auth0Client")
     @Bean
     public Auth0Client auth0Client() {
         return new Auth0Client(clientId, issuer);

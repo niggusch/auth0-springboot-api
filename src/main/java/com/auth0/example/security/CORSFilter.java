@@ -1,4 +1,4 @@
-package com.mydomain.security;
+package com.auth0.example.security;
 
 import org.springframework.stereotype.Component;
 

@@ -1,6 +1,6 @@
-package com.mydomain.config;
+package com.auth0.example.config;
 
-import com.mydomain.security.SecurityConfig;
+import com.auth0.example.security.SecurityConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.*;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
@@ -13,7 +13,8 @@ import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 @Import(SecurityConfig.class)
 public class AppConfig {
 
-    @Autowired SecurityConfig securityConfig;
+    @Autowired
+    SecurityConfig securityConfig;
 
     @Bean
     public static PropertySourcesPlaceholderConfigurer propertySourcesPlaceholderConfigurer() {

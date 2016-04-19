@@ -1,0 +1,53 @@
+{
+	"id": "a896980d-edf7-3a2c-522e-1b4e2657d075",
+	"name": "auth0-springboot-api",
+	"description": "",
+	"order": [
+		"0b421d02-7fad-5a67-5d2d-0eeac2486781",
+		"9a685813-f2d8-d87c-3660-ae6fdcb05f84"
+	],
+	"folders": [],
+	"timestamp": 1461067084689,
+	"owner": "429370",
+	"remoteLink": "",
+	"public": false,
+	"requests": [
+		{
+			"id": "0b421d02-7fad-5a67-5d2d-0eeac2486781",
+			"headers": "Authorization: Bearer {{token}}\nContent-Type: application/json\n",
+			"url": "http://localhost:8080/secured/get",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"tests": "tests[\"Status code is 200\"] = responseCode.code === 200;",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1461069014226,
+			"name": "http://localhost:8080/secured/get",
+			"description": "",
+			"collectionId": "a896980d-edf7-3a2c-522e-1b4e2657d075",
+			"responses": []
+		},
+		{
+			"id": "9a685813-f2d8-d87c-3660-ae6fdcb05f84",
+			"headers": "Authorization: Bearer {{token}}\nContent-Type: application/json\n",
+			"url": "http://localhost:8080/secured/post",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": "tests[\"Status code is 200\"] = responseCode.code === 200;",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1461069030730,
+			"name": "http://localhost:8080/secured/post",
+			"description": "",
+			"collectionId": "a896980d-edf7-3a2c-522e-1b4e2657d075",
+			"responses": [],
+			"rawModeData": "{\"hello\":\"world\"}"
+		}
+	]
+}

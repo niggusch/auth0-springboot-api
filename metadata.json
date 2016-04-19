@@ -1,0 +1,21 @@
+{
+  "title": "auth0 springboot api sample",
+  "description": "Demonstrates a modern approach to using Auth0 with SpringBoot and Spring Security to create an API Server.",
+  "seed": "true",
+  "languages":[
+    "java"
+  ],
+  "frameworks":[
+    "spring boot",
+    "spring security",
+    "spring security auth0",
+    "auth0"
+  ],
+  "tags": [
+    "java",
+    "spring",
+    "springboot",
+    "auth0",
+    "api"
+  ]
+}

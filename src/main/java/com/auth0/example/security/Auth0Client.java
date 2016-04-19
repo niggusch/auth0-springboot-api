@@ -1,4 +1,4 @@
-package com.mydomain.security;
+package com.auth0.example.security;
 
 import com.auth0.Auth0;
 import com.auth0.authentication.AuthenticationAPIClient;
@@ -15,21 +15,17 @@ public class Auth0Client {
     private AuthenticationAPIClient client;
     private Auth0 auth0;
 
-//    public Auth0Client(){
-//        super();
-//    }
-
-    public Auth0Client(String clientid, String domain){
-        this.clientid=clientid;
-        this.domain=domain;
+    public Auth0Client(String clientid, String domain) {
+        this.clientid = clientid;
+        this.domain = domain;
 
         this.auth0 = new Auth0(clientid, domain);
         this.client = this.auth0.newAuthenticationAPIClient();
     }
 
-    public String getUsername(Auth0JWTToken token){
-        Request<UserProfile> request= client.tokenInfo(token.getJwt());
-        UserProfile profile=request.execute();
+    public String getUsername(Auth0JWTToken token) {
+        Request<UserProfile> request = client.tokenInfo(token.getJwt());
+        UserProfile profile = request.execute();
         return profile.getEmail();
     }
 
